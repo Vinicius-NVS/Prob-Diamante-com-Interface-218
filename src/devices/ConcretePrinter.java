@@ -1,15 +1,15 @@
-package entities;
+package devices;
 
-public class Printer extends Device {
+public class ConcretePrinter extends Device implements Printer {
 		
-	public Printer(String serialNumber) {
+	public ConcretePrinter(String serialNumber) {
 		super(serialNumber);
 	}
 	@Override
 	public void processDoc(String doc) {
 	System.out.println("Printer Processing: " + doc);	
 	}
-	
+	@Override
 	public void print(String doc) {
 		System.out.println("Printing:  " + doc);
 	}
